@@ -1,0 +1,213 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\obj\\Debug\\net8.0\\compressed\\8strqnd6k6.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MainProject.styles.css",
+      "PackagePath": "staticwebassets\\MainProject.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\Responsive.css",
+      "PackagePath": "staticwebassets\\css\\Responsive.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\Style.css",
+      "PackagePath": "staticwebassets\\css\\Style.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\about-img1.jpg",
+      "PackagePath": "staticwebassets\\css\\about-img1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\about-img2.jpg",
+      "PackagePath": "staticwebassets\\css\\about-img2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\call-icon.png",
+      "PackagePath": "staticwebassets\\css\\call-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\contact-img1.jpg",
+      "PackagePath": "staticwebassets\\css\\contact-img1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\fb-icon.png",
+      "PackagePath": "staticwebassets\\css\\fb-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\footer-logo.png",
+      "PackagePath": "staticwebassets\\css\\footer-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\img1.jpg",
+      "PackagePath": "staticwebassets\\css\\img1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\img10.jpg",
+      "PackagePath": "staticwebassets\\css\\img10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\img11.jpg",
+      "PackagePath": "staticwebassets\\css\\img11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\img12.jpg",
+      "PackagePath": "staticwebassets\\css\\img12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\img13.jpg",
+      "PackagePath": "staticwebassets\\css\\img13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\img14.jpg",
+      "PackagePath": "staticwebassets\\css\\img14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\img15.jpg",
+      "PackagePath": "staticwebassets\\css\\img15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\img16.jpg",
+      "PackagePath": "staticwebassets\\css\\img16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\img17.jpg",
+      "PackagePath": "staticwebassets\\css\\img17.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\img18.jpg",
+      "PackagePath": "staticwebassets\\css\\img18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\img2.jpg",
+      "PackagePath": "staticwebassets\\css\\img2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\img3.jpg",
+      "PackagePath": "staticwebassets\\css\\img3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\img4.jpg",
+      "PackagePath": "staticwebassets\\css\\img4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\img5.jpg",
+      "PackagePath": "staticwebassets\\css\\img5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\img6.jpg",
+      "PackagePath": "staticwebassets\\css\\img6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\img7.jpg",
+      "PackagePath": "staticwebassets\\css\\img7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\img8.jpg",
+      "PackagePath": "staticwebassets\\css\\img8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\img9.jpg",
+      "PackagePath": "staticwebassets\\css\\img9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\instagram-icon.png",
+      "PackagePath": "staticwebassets\\css\\instagram-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\logo.png",
+      "PackagePath": "staticwebassets\\css\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\mail-icon.png",
+      "PackagePath": "staticwebassets\\css\\mail-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\map-icon.png",
+      "PackagePath": "staticwebassets\\css\\map-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\quick-icon.png",
+      "PackagePath": "staticwebassets\\css\\quick-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\search-icon.png",
+      "PackagePath": "staticwebassets\\css\\search-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\social-icon.png",
+      "PackagePath": "staticwebassets\\css\\social-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\the boys.png",
+      "PackagePath": "staticwebassets\\css\\the boys.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\the boys2.png",
+      "PackagePath": "staticwebassets\\css\\the boys2.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\the boys3.png",
+      "PackagePath": "staticwebassets\\css\\the boys3.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\twitter-icon.png",
+      "PackagePath": "staticwebassets\\css\\twitter-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\css\\wallpaper.jpeg",
+      "PackagePath": "staticwebassets\\css\\wallpaper.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MainProject\\MainProject\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MainProject.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MainProject.props",
+      "PackagePath": "build\\MainProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MainProject.props",
+      "PackagePath": "buildMultiTargeting\\MainProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MainProject.props",
+      "PackagePath": "buildTransitive\\MainProject.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

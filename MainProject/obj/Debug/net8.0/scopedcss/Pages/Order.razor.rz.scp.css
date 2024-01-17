@@ -1,0 +1,71 @@
+/* Add CSS styles for table */
+.table[b-m36z6g34zj] {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+    .table th[b-m36z6g34zj], .table td[b-m36z6g34zj] {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .table th[b-m36z6g34zj] {
+        background-color: #f2f2f2;
+    }
+
+/* Styles for buttons */
+button[b-m36z6g34zj] {
+    padding: 8px 16px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+    button:hover[b-m36z6g34zj] {
+        background-color: #45a049;
+    }
+
+/*Side NavBar*/
+.sidebar[b-m36z6g34zj] {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 16px;
+}
+
+    .sidebar a[b-m36z6g34zj] {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+    }
+
+        .sidebar a:hover[b-m36z6g34zj] {
+            color: #f1f1f1;
+        }
+
+.main[b-m36z6g34zj] {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar[b-m36z6g34zj] {
+        padding-top: 15px;
+    }
+
+        .sidebar a[b-m36z6g34zj] {
+            font-size: 18px;
+        }
+}

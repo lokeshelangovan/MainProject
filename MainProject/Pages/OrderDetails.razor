@@ -1,0 +1,58 @@
+﻿@page "/order-details/{orderId}"
+@inject NavigationManager NavigationManager
+<h1>Order Details</h1>
+
+@if (Order != null)
+{
+    <div class="order-details">
+        <h2>Order ID: @Order.Id</h2>
+        <p>Customer ID: @Order.CustomerId</p>
+        <p>Order Date: @Order.OrderDate.ToShortDateString()</p>
+        <p>Total Amount: @Order.TotalAmount</p>
+        <p>Status: @Order.Status</p>
+        <p>Status: @Order.ShippingAddress</p>
+        <p>Status: @Order.BillingAddress</p>
+        <!-- Add more details here -->
+
+        <button @onclick="GoBack">Back to Orders</button>
+    </div>
+}
+else
+{
+    <p>Order details not found.</p>
+}
+
+@code {
+    [Parameter]
+    public string? OrderId { get; set; }
+
+    private OrderModel? Order;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Fetch order details based on the orderId parameter
+        // Make an API call to get order details by ID using HttpClient
+        var httpClient = new HttpClient();
+        Order = await httpClient.GetFromJsonAsync<OrderModel>($"https://yourapiurl.com/api/orders/{OrderId}");
+    }
+
+    private void GoBack()
+    {
+        // Navigate back to the orders page
+        NavigationManager.NavigateTo("/orders");
+    }
+
+    // Order model representing the order details
+    public class OrderModel
+    {
+        public int Id { get; set; }
+        public string? CustomerId { get; set; }
+        public DateTime OrderDate { get; set; }
+        public decimal? TotalAmount { get; set; }
+        public string? Status { get; set; }
+        public string? ShippingAddress { get; set; }
+        public string? BillingAddress { get; set; }
+        // Add more properties for order details
+    }
+}
+

@@ -1,0 +1,95 @@
+﻿@page "/Test"
+
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+
+<h3>Product List</h3>
+
+@if (products == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in products)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.Name</td>
+                    <td>@product.Description</td>
+                    <td>@product.Category</td>
+                    <td>@product.Price</td>
+                    <td>@product.Quantity</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@code {
+    
+      
+    
+    // private List<ProductManagement> products;
+
+    // protected override async Task OnInitializedAsync()
+    // {
+    //     // Replace the API endpoint with your actual API endpoint
+    //     var apiEndpoint = "https://localhost:7053/api/Menswear/Product";
+
+    //     try
+    //     {
+    //         // Make the API request and deserialize the response
+    //         products = await Http.GetFromJsonAsync<List<ProductManagement>>(apiEndpoint);
+    //     }
+    //     catch (Exception ex)
+    //     {
+    //         // Handle the exception (e.g., log or display an error message)
+    //         Console.WriteLine($"Error: {ex.Message}");
+    //     }
+    // }
+
+    ProductManagement[]? products;
+    private string feedbackMessage = "";
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    protected async Task LoadData()
+    {
+        try
+        {
+            products = await Http.GetFromJsonAsync<ProductManagement[]>("https://localhost:7053/api/Menswear/Product");
+        }
+        catch (Exception ex)
+        {
+            // Log the exception or provide user feedback
+            feedbackMessage = $"Error loading data: {ex.Message}";
+        }
+    }
+
+    public class ProductManagement
+    {
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public int Category { get; set; }
+
+        public string? Description { get; set; }
+        public decimal? Price { get; set; }
+        public int Quantity { get; set; }
+        public string? ImageUrl { get; set; }
+    }
+}

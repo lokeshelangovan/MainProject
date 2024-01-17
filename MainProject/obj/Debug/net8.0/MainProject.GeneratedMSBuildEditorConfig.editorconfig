@@ -1,0 +1,83 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = MainProject
+build_property.RootNamespace = MainProject
+build_property.ProjectDir = C:\Users\Lenovo\Source\Repos\MainProject\MainProject\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Lenovo\Source\Repos\MainProject\MainProject
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Lenovo/source/repos/MainProject/MainProject/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/MainProject/MainProject/Pages/AboutUs.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXRVcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/MainProject/MainProject/Pages/ApiTesting.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBpVGVzdGluZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/MainProject/MainProject/Pages/Contact.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/MainProject/MainProject/Pages/Gallery.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2FsbGVyeS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/MainProject/MainProject/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/MainProject/MainProject/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/MainProject/MainProject/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-re04y74ocy
+
+[C:/Users/Lenovo/source/repos/MainProject/MainProject/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-spuu7f43a1
+
+[C:/Users/Lenovo/source/repos/MainProject/MainProject/Pages/Cart.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-498xl3kkg4
+
+[C:/Users/Lenovo/source/repos/MainProject/MainProject/Pages/Order.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-m36z6g34zj
+
+[C:/Users/Lenovo/source/repos/MainProject/MainProject/Pages/OrderDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJEZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-k1ha1qs6ab
+
+[C:/Users/Lenovo/source/repos/MainProject/MainProject/Pages/Seller.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VsbGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-r07fpnq2w3
+
+[C:/Users/Lenovo/source/repos/MainProject/MainProject/Pages/SellerLoginandSignup.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VsbGVyTG9naW5hbmRTaWdudXAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-udlf0rnvx0
+
+[C:/Users/Lenovo/source/repos/MainProject/MainProject/Pages/UserLoginandSignup.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckxvZ2luYW5kU2lnbnVwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-ofpg5810ro

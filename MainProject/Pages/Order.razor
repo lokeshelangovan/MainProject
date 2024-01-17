@@ -1,0 +1,91 @@
+﻿@page "/orders"
+
+<div class="sidebar">
+    <a href="/sellerportal"> Product Management</a>
+    <a href="/orders"> Orders</a>
+    <a href="#clients"> Clients</a>
+    <a href="#contact"> Contact</a>
+</div>
+
+<div class="main">
+<h1>Seller Orders</h1>
+
+@if (OrderList != null && OrderList.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Customer ID</th>
+                <th>Order Date</th>
+                <th>Total Amount</th>
+                <th>Status</th>
+                <th>Shipping Address</th>
+                <th>Billing Address</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in OrderList)
+            {
+                <tr>
+                    <td>@order.Id</td>
+                    <td>@order.CustomerId</td>
+                    <td>@order.OrderDate.ToShortDateString()</td>
+                    <td>@order.TotalAmount</td>
+                    <td>@order.Status</td>
+                    <td>@order.ShippingAddress</td>
+                    <td>@order.BillingAddress</td>
+                    <td>
+                        <button @onclick="() => ViewOrderDetails(order.Id)">View Details</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No orders available.</p>
+}
+</div>
+@code {
+    private List<OrderModel>? OrderList;
+
+    // Fetch orders from the API when the component is initialized
+    protected override async Task OnInitializedAsync()
+    {
+        OrderList = await FetchOrders();
+    }
+
+    // Method to fetch orders from the API
+    private async Task<List<OrderModel>> FetchOrders()
+    {
+        // Make an API call to fetch orders using HttpClient
+        // Replace "https://yourapiurl.com/api/orders" with your actual API endpoint
+        var httpClient = new HttpClient();
+        var response = await httpClient.GetFromJsonAsync<List<OrderModel>>("https://yourapiurl.com/api/orders");
+
+        return response ?? new List<OrderModel>();
+    }
+
+    // Method to view order details (navigate to order details page or modal)
+    private void ViewOrderDetails(int orderId)
+    {
+        // Logic to navigate to order details page or open a modal for order details
+        // Implement according to your requirements
+    }
+
+    // Order class representing the order model
+    public class OrderModel
+    {
+        public int Id { get; set; }
+        public string? CustomerId { get; set; }
+        public DateTime OrderDate { get; set; }
+        public decimal? TotalAmount { get; set; }
+        public string? Status { get; set; }
+        public string? ShippingAddress { get; set; }
+        public string? BillingAddress { get; set; }
+        // Add other properties as needed for order details
+    }
+}

@@ -1,0 +1,153 @@
+﻿
+@page "/login"
+@using MainProject.Shared
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+
+<div class="container @(isSignUpActive ? "right-panel-active" : "")" id="container">
+	<div class="form-container sign-up-container">
+		<form @onsubmit="SignUp">
+			<h1>Create Account</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your email for registration</span>
+			<input type="text" @bind="username" placeholder="Name" />
+			<input type="email" @bind="email" placeholder="Email" />
+			<input type="password" @bind="password" placeholder="Password" />
+			<button>Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form @onsubmit="SignIn">
+			<h1>Sign in</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your account</span>
+			<input type="email" @bind="loginEmail" placeholder="Email" />
+			<input type="password" @bind="loginPassword" placeholder="Password" />
+			<a href="#">Forgot your password?</a>
+			<button>Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" @onclick="SwitchToSignIn" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" @onclick="SwitchToSignUp" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+
+	
+</div>
+<!-- Display success message for sign up -->
+	@if (signupSuccess)
+	{
+		<div class="success-message">
+			Signed up successfully!
+		</div>
+	}
+
+	<!-- Display success message for sign in -->
+	@if (loginSuccess)
+	{
+		<div class="success-message">
+			Logged in successfully!
+		</div>
+	}
+
+@code {
+    @code {
+        private bool isSignUpActive = false;
+        private string? username;
+        private string? email;
+        private string? password;
+        private string? loginEmail;
+        private string? loginPassword;
+        private string errorMessage;
+        private bool signupSuccess = false;
+        private bool loginSuccess = false;
+
+        private void SwitchToSignUp()
+        {
+            isSignUpActive = true;
+        }
+
+        private void SwitchToSignIn()
+        {
+            isSignUpActive = false;
+        }
+
+        private async Task SignUp()
+        {
+            var newUser = new
+            {
+                UserName = username,
+                Email = email,
+                Password = password
+            };
+
+            var response = await Http.PostAsJsonAsync("https://localhost:7053/api/Menswear/UserSignup", newUser);
+
+            if (response.IsSuccessStatusCode)
+            {
+                signupSuccess = true;
+                await Task.Delay(2000);
+                NavigationManager.NavigateTo("/login");
+            }
+        }
+
+        private async Task SignIn()
+        {
+            var loginData = new
+            {
+                Email = loginEmail,
+                Password = loginPassword
+            };
+
+            var response = await Http.PostAsJsonAsync("https://localhost:7053/api/Menswear/UserLogin", loginData);
+
+            if (response.IsSuccessStatusCode)
+            {
+                // Set loginSuccess to true before navigating
+                loginSuccess = true;
+
+                // Navigate to home page after a short delay (adjust as needed)
+                await Task.Delay(2000);
+                NavigationManager.NavigateTo("/");
+            }
+            else
+            {
+                errorMessage = "Invalid email or password. Please try again.";
+            }
+        }
+
+        protected override void OnInitialized()
+        {
+            // Subscribe to the event when the component is initialized
+            // Make sure this is not missing in your actual code
+            // AuthService.OnLoginStatusChanged += HandleLoginStatusChanged;
+        }
+
+        // Uncomment this if you need to handle login status changes
+        // private void HandleLoginStatusChanged((bool success, string username) status)
+        // {
+        //     loginSuccess = status.success;
+        // }
+    }
+
+
+}

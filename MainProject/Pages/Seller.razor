@@ -1,0 +1,185 @@
+﻿
+
+@page "/sellerportal"
+@using MainProject.Shared
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+<div class="feedback" style="color: green; margin-top: 10px;">@feedbackMessage</div>
+<div class="sidebar">
+    <a href="/sellerportal" class="@SetActiveClass("/sellerportal")"> Product Management</a>
+    <a href="/orders" class="@SetActiveClass("/orders")"> Orders</a>
+    <a href="#clients"> Clients</a>
+    <a href="#contact"> Contact</a>
+</div>
+
+<div class="main">
+    <h1>Seller Portal - Product Management</h1>
+    <hr />
+
+  
+
+
+<table class="table">
+    <thead>
+        <tr>
+            
+            <th>Name</th>
+            <th>Discription</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+
+            @if (product != null)
+            {
+                @foreach (var prod in product)
+                {
+                    <tr>
+                        
+                        <td>@prod.Name</td>
+                        <td>@prod.Description</td>
+                        <td>@prod.Category</td>
+                        <td>@prod.Price</td>
+                        <td>@prod.Quantity</td>
+                        <td>
+                            <button @onclick="() => EditProduct(prod)">Edit</button>
+                            <button @onclick="() => DeleteProduct(prod.Id)">Delete</button>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+</table>
+
+@if (showAddProductModal)
+{
+    <div class="modal">
+        <div class="modal-content">
+            <h2>Add New Product</h2>
+            <form>
+                <label>Name:</label>
+                    <input @bind="newProduct.Name" type="text" />
+                <label>Discription:</label>
+                <input @bind="newProduct.Description" type="text" />
+                <label>Category:</label>
+                <input @bind="newProduct.Category" type="text" />
+                <label>Price:</label>
+                <input @bind="newProduct.Price" type="number" step="0.01" />
+                <label>Quantity:</label>
+                <input @bind="newProduct.Quantity" type="number" />
+               
+                <div>
+                    <button @onclick="AddNewProduct">Save</button>
+                    <button @onclick="CancelAddProduct">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+}
+    <button @onclick="ShowAddProductModal">Add Product</button>
+</div>
+
+
+@code {
+    //----------------------------------------------------------
+    ProductManagement[]? product;
+    ProductManagement? editingProduct;
+    private string feedbackMessage = "";
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    protected async Task LoadData()
+    {
+        try
+        {
+            product = await Http.GetFromJsonAsync<ProductManagement[]>("https://localhost:7053/api/Menswear/Product");
+        }
+        catch (Exception ex)
+        {
+            // Log the exception or provide user feedback
+            feedbackMessage = $"Error loading data: {ex.Message}";
+        }
+    }
+
+    ProductManagement newProduct = new ProductManagement();
+
+
+
+    protected async Task AddNewProduct()
+    {
+        try
+        {
+            ProductManagement[] productsArray = new ProductManagement[] { newProduct };
+
+            // Optimistically update UI
+            product = product?.Concat(productsArray).ToArray();
+            showAddProductModal = false;
+
+            // Clear feedback message after a certain time
+            feedbackMessage = "Product added successfully!";
+            await Task.Delay(5000); // 5000 milliseconds (5 seconds)
+            feedbackMessage = "";
+
+            // Send request to the server
+            await Http.PostAsJsonAsync("https://localhost:7053/api/Menswear/Product", productsArray);
+            NavigationManager.NavigateTo("/sellerportal");
+        }
+        catch (Exception ex)
+        {
+            // Log the error to the console
+            Console.WriteLine($"Error adding product: {ex}");
+
+            // Revert UI changes if an error occurs
+            product = await Http.GetFromJsonAsync<ProductManagement[]>("https://localhost:7053/api/Menswear/Product");
+            showAddProductModal = true;
+
+            // Set an error message for user feedback
+            feedbackMessage = $"Error adding product: {ex.Message}";
+        }
+    }
+    void CancelAddProduct()
+    {
+        showAddProductModal = false;
+        // Optionally, you might want to clear the new product data here
+        newProduct = new ProductManagement();
+        NavigationManager.NavigateTo("/sellerportal");
+    }
+    //------------------------------------------------------
+    private string SetActiveClass(string link)
+    {
+        return NavigationManager.Uri.Contains(link) ? "active" : string.Empty;
+    }
+
+    
+
+    private void EditProduct(ProductManagement prod)
+    {
+        // Show the modal for editing
+    }
+
+    
+
+    private void DeleteProduct(int productId)
+    {
+        // Logic to delete the product
+        // Implement according to your requirements
+    }
+
+    private bool showAddProductModal = false;
+
+    // private Product newProduct = new Product();
+
+    private void ShowAddProductModal()
+    {
+        showAddProductModal = true;
+       
+    }
+
+   }
